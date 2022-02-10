@@ -1,7 +1,5 @@
-#include<Init.h>
-
 template<typename T>
-void showvec(vector<T> vec,int flag)
+void showvec(vector<T> vec,int flag=1)
 {
     for(auto & a:vec) cout<<' '<<a;
     if(flag==1) cout<<endl;
@@ -9,7 +7,7 @@ void showvec(vector<T> vec,int flag)
 }
 
 template<typename T>
-void showvec2(vector<vector<T>> vec,int flag)
+void showvec2(vector<vector<T>> vec,int flag=1)
 {
     for(auto & a:vec) showvec<T>(a,2);
     if(flag==1) cout<<endl;
