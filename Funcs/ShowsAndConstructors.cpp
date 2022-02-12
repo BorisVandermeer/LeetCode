@@ -1,4 +1,4 @@
-template<typename T>
+template<typename T=int>
 void showvec(vector<T> vec,int flag=1)
 {
     for(auto & a:vec) cout<<' '<<a;
@@ -6,7 +6,7 @@ void showvec(vector<T> vec,int flag=1)
     if(flag==2) cout<<", ";
 }
 
-template<typename T>
+template<typename T=int>
 void showvec2(vector<vector<T>> vec,int flag=1)
 {
     for(auto & a:vec) showvec<T>(a,2);
