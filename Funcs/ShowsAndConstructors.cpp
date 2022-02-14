@@ -13,7 +13,7 @@ void showvec2(vector<vector<T>> vec,int flag=1)
     if(flag==1) cout<<endl;
 }
 
-vector<int> str2vecI(string & str)
+vector<int> str2vecI(string str)
 {
     vector<int> ans;
     int flag = 0;
@@ -45,7 +45,7 @@ vector<int> str2vecI(string & str)
     return ans;
 }
 
-vector<vector<int>> str2vec2I(string & str)
+vector<vector<int>> str2vec2I(string str)
 {
     vector<vector<int>> ans;
     int flag;
