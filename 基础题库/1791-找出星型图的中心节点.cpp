@@ -1,34 +1,7 @@
-//showvecfuncs:
-//Type = 1  means \n
-//Type = 2  means ", "
-//Type = 3  means " "
-//else      nothing
+#include<iostream>
+#include<vector>
 
-template<typename T=int>
-void showvec(vector<T> vec,int D1Type=1,int D0Type = 3)
-{
-    if(D0Type = 2) for(auto & a:vec) cout<<a<<", ";
-    else if(D0Type = 3) for(auto & a:vec) cout<<' '<<a;
-    else for(auto & a:vec) cout<<a;
-    if(D1Type==1) cout<<endl;
-    if(D1Type==2) cout<<", ";
-    if(D1Type==3) cout<<" ";
-}
-
-template<typename T=int>
-void showvec2(vector<vector<T>> vec,int D2Type = 1,int D1Type=1)
-{
-    for(auto & a:vec) showvec<T>(a,2);
-    if(D2Type==1) cout<<endl;
-}
-
-// 没有调试
-template<typename T=int>
-void showvec3(vector<vector<vector<T>>> vec,int D3Type=1)
-{
-    for(auto b:vec) for(auto & a:b) showvec<T>(a,1);
-    if(D3Type ==1) cout<<endl;
-}
+using namespace std;
 
 vector<int> str2vecI(string str)
 {
@@ -79,4 +52,21 @@ vector<vector<int>> str2vec2I(string str)
         }
     }
     return ans;
+}
+
+class Solution {
+public:
+    int findCenter(vector<vector<int>>& edges) {
+        return edges[0][0]==edges[1][0]||edges[0][0]==edges[1][1]?edges[0][0]:edges[0][1];
+    }
+};
+
+int main()
+{
+    Solution slv;
+    vector<vector<int>> edges  = 
+    str2vec2I("[[1,2],[2,3],[4,2]]");
+    int ans = slv.findCenter(edges);
+    cout<<ans;
+    return 0;
 }
