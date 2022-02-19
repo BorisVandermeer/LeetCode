@@ -8,7 +8,7 @@ template<typename T=int>
 void showvec(vector<T> vec,int D1Type=1,int D0Type = 3)
 {
     if(D0Type = 2) for(auto & a:vec) cout<<a<<", ";
-    else if(D0Type = 3) for(auto & a:vec) cout<<' '<<a;
+    else if(D0Type = 3) for(auto & a:vec) cout<<a<<' ';
     else for(auto & a:vec) cout<<a;
     if(D1Type==1) cout<<endl;
     if(D1Type==2) cout<<", ";
