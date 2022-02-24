@@ -1,9 +1,7 @@
-//showvecfuncs:
-//Type = 1  means \n
-//Type = 2  means ", "
-//Type = 3  means " "
-//else      nothing
+#include<iostream>
+#include<vector>
 
+using namespace std;
 template<typename T=int>
 void showvec(vector<T> vec,int D1Type=1,int D0Type = 3)
 {
@@ -30,7 +28,6 @@ void showvec3(vector<vector<vector<T>>> vec,int D3Type=1,int D1Type=3)
     if(D3Type ==1) cout<<endl;
 }
 
-vector<int> str2vecI(string str)
 vector<int> str2vecI(string str)
 {
     vector<int> ans;
@@ -84,4 +81,49 @@ vector<vector<int>> str2vec2I(string str)
         }
     }
     return ans;
+}
+
+
+class Solution {
+public:
+    vector<int> findBall(vector<vector<int>>& grid) {
+        vector<int> ans(grid[0].size());
+        for(int i=0;i<ans.size();i++) ans[i] = i;
+        for(int i=0;i<grid.size();i++)
+        {
+            for(int j=0;j<ans.size();j++)
+            {
+                if(ans[j]==-1) continue;
+                if(grid[i][ans[j]]==1)
+                {
+                    if(ans[j]==ans.size()-1||grid[i][ans[j]+1]==-1)
+                    {
+                        ans[j] = -1;
+                    }
+                    else ans[j]++;
+                }
+                else
+                {
+                    if(ans[j]==0||grid[i][ans[j]-1]==1)
+                    {
+                        ans[j] = -1;
+                    }
+                    else ans[j]--;
+                }
+            }
+        }
+        return ans;
+    }
+};
+
+int main()
+{
+    Solution slv;
+    string Input = 
+    "[[1,1,1,-1,-1],[1,1,1,-1,-1],[-1,-1,-1,1,1],[1,1,1,1,-1],[-1,-1,-1,-1,-1]]";
+    vector<vector<int>> grid = str2vec2I(Input);
+    showvec2(grid);
+    vector<int> ans = slv.findBall(grid);
+    showvec(ans);
+    return 0;
 }
