@@ -31,7 +31,6 @@ void showvec3(vector<vector<vector<T>>> vec,int D3Type=1,int D1Type=3)
 }
 
 vector<int> str2vecI(string str)
-vector<int> str2vecI(string str)
 {
     vector<int> ans;
     int flag = 0;
