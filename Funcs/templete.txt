@@ -1,0 +1,27 @@
+#include<iostream>
+#include<vector>
+#include<string>
+#include<queue>
+#include<utility>
+#include<map>
+#include<unordered_map>
+#include<algorithm>
+
+
+using namespace std;
+
+class Solution {
+public:
+    bool winnerOfGame(string colors) {
+        
+    }
+};
+
+int main()
+{
+    Solution slv;
+
+    auto ans = slv
+    // cout<<ans;
+    return 0;
+}
