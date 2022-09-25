@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "future": "cpp",
+        "system_error": "cpp",
+        "regex": "cpp"
+    },
+    "code-runner.executorMap": {
+    
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o outputexec && $dir/outputexec",
+        "cpp": "cd $dir && g++ $fileName -o outputexec && $dir/outputexec",
+        "python": "python -u"
+    }
+}
