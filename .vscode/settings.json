@@ -2,7 +2,8 @@
     "files.associations": {
         "future": "cpp",
         "system_error": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "iostream": "cpp"
     },
     "code-runner.executorMap": {
     
