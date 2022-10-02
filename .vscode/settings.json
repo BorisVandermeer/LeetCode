@@ -3,7 +3,8 @@
         "future": "cpp",
         "system_error": "cpp",
         "regex": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "functional": "cpp"
     },
     "code-runner.executorMap": {
     
