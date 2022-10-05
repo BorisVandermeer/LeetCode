@@ -1,33 +1,36 @@
-//showvecfuncs:
-//Type = 1  means \n
-//Type = 2  means ", "
-//Type = 3  means " "
-//else      nothing
+#include<iostream>
+#include<vector>
+#include<string>
+#include<queue>
+#include<utility>
+#include<stack>
+#include<map>
+#include<unordered_map>
+#include<algorithm>
+#include<string.h>
+
+using namespace std;
 
 template<typename T=int>
-void showvec(vector<T> vec,int D1Type=1,int D0Type = 3)
+void showvec(vector<T> vec, char CharEnd = '\n',char Char0=' ')
 {
-    if(D0Type = 2) for(auto & a:vec) cout<<a<<", ";
-    else if(D0Type = 3) for(auto & a:vec) cout<<a<<' ';
-    else for(auto & a:vec) cout<<a;
-    if(D1Type==1) cout<<endl;
-    if(D1Type==2) cout<<", ";
-    if(D1Type==3) cout<<" ";
+    for(auto & a:vec) cout<<a<<Char0;
+    cout<<CharEnd;
 }
 
 template<typename T=int>
-void showvec2(vector<vector<T>> vec,int D2Type = 1,int D1Type=1)
+void showvec2(vector<vector<T>> vec,char CharEnd = '\0',char Char1 = '\n',char Char0=' ')
 {
-    for(auto & a:vec) showvec<T>(a,D1Type);
-    if(D2Type==1) cout<<endl;
+    for(auto & a:vec) showvec<T>(a,Char1,Char0);
+    cout<<CharEnd;
 }
 
 // 没有调试
 template<typename T=int>
-void showvec3(vector<vector<vector<T>>> vec,int D3Type=1,int D1Type=3)
+void showvec3(vector<vector<vector<T>>> vec,char CharEnd = '\0',char Char2 = '\n', char Char1 = '\n',char Char0=' ')
 {
-    for(auto b:vec) for(auto & a:b) showvec<T>(a,1,D1Type);
-    if(D3Type ==1) cout<<endl;
+    for(auto & a:vec) showvec2<T>(a,Char2,Char1,Char0);
+    cout<<CharEnd;
 }
 
 vector<int> str2vecI(string str)

@@ -4,14 +4,16 @@
         "system_error": "cpp",
         "regex": "cpp",
         "iostream": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "iosfwd": "cpp",
+        "stack": "cpp"
     },
     "code-runner.executorMap": {
     
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o outputexec && $dir/outputexec",
-        "cpp": "cd $dir && g++ $fileName -o outputexec && $dir/outputexec",
+        "cpp": "cd $dir && g++  -std=gnu++17 $fileName -o outputexec && $dir/outputexec",
         "python": "python -u"
     }
 }
