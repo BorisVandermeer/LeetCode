@@ -6,7 +6,8 @@
         "iostream": "cpp",
         "functional": "cpp",
         "iosfwd": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "vector": "cpp"
     },
     "code-runner.executorMap": {
     
