@@ -7,14 +7,16 @@
         "functional": "cpp",
         "iosfwd": "cpp",
         "stack": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "xstring": "cpp",
+        "unordered_set": "cpp"
     },
     "code-runner.executorMap": {
     
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o outputexec && $dir/outputexec",
-        "cpp": "cd $dir && g++  -std=gnu++17 $fileName -o outputexec && $dir/outputexec",
+        "cpp": "cd $dir && g++  -std=gnu++17 $fileName -o outputexec && outputexec",
         "python": "python -u"
     }
 }
