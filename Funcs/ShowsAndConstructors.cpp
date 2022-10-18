@@ -19,15 +19,14 @@ void showvec(vector<T> vec, char CharEnd = '\n',char Char0=' ')
 }
 
 template<typename T=int>
-void showvec2(vector<vector<T>> vec,char CharEnd = '\0',char Char1 = '\n',char Char0=' ')
+void showvec2(vector<vector<T>> vec,char CharEnd = '\n',char Char1 = '\n',char Char0=' ')
 {
     for(auto & a:vec) showvec<T>(a,Char1,Char0);
     cout<<CharEnd;
 }
 
-// 没有调试
 template<typename T=int>
-void showvec3(vector<vector<vector<T>>> vec,char CharEnd = '\0',char Char2 = '\n', char Char1 = '\n',char Char0=' ')
+void showvec3(vector<vector<vector<T>>> vec,char CharEnd = '\n',char Char2 = '\n', char Char1 = '\n',char Char0=' ')
 {
     for(auto & a:vec) showvec2<T>(a,Char2,Char1,Char0);
     cout<<CharEnd;
